@@ -1,0 +1,40 @@
+@import "./App.scss";
+$secondary-color: #bd4b4b;
+.navbar {
+  background-color: $secondary-color;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 999;
+  padding: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar a {
+  text-decoration: none;
+  background-color: $secondary-color;
+  color: white;
+  float: left;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  padding-right: 1.1rem;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  margin-left: 50%;
+  margin-right: 50%;
+  white-space: nowrap;
+  background-color: #bd4b4b;
+}
+
+.fa-brain {
+  background-color: #bd4b4b;
+  padding-right: 0.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .navbar a {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,25 @@
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.contentBox {
+  display: flex;
+  float: left;
+}
+
+hr {
+  //background: pink;
+  float: left;
+  border: none;
+  width: 0.2%;
+  background: -webkit-gradient(
+    radial,
+    50% 50%,
+    0,
+    50% 50%,
+    350,
+    from(rgba(189, 75, 75, 1)),
+    to(rgba(0, 0, 0, 0))
+  ); /* Chrome10+,Safari5.1+ */
+}
