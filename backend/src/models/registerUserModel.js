@@ -26,6 +26,13 @@ const registerSchema = new mongoose.Schema({
       },
     },
   ],
+
+  links: [
+    {
+      original_url: { type: String },
+      converted_url: [{ url: { type: String } }],
+    },
+  ],
 });
 
 registerSchema.methods.generateToken = async function () {

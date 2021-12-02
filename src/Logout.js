@@ -13,7 +13,6 @@ export const Logout = () => {
       credentials: "include",
     })
       .then((res) => {
-        console.log("Success");
         history.push("/", { replace: true });
       })
       .catch((err) => {

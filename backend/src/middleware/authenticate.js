@@ -17,6 +17,7 @@ const authenticate = async (req, res, next) => {
     req.token = token;
     req.rootUser = rootUser;
     req.userID = rootUser._id;
+    res.locals.userInfo = rootUser;
     next();
   } catch (error) {
     res.status(401).send("Unautorized: No token provided");

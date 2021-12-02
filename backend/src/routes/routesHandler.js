@@ -5,6 +5,7 @@ const { loginUser } = require("../controller/loginUser");
 const { registerUser } = require("../controller/registerUser");
 const { aboutUser } = require("../controller/aboutUser");
 const authenticate = require("../middleware/authenticate");
+const { generateLink } = require("../controller/generateLink");
 
 const router = express.Router();
 
@@ -20,5 +21,7 @@ router.get("/logout", authenticate, (req, res) => {
   res.clearCookie("jwtAuthToken", { path: "/" });
   res.status(200).send("Logout Done");
 });
+
+router.route("/newlink").post(authenticate, generateLink);
 
 module.exports = router;

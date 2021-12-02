@@ -12,7 +12,7 @@ const loginUser = async (req, res) => {
     try {
       const token = await userExists.generateToken();
       res.cookie("jwtAuthToken", token, {
-        expires: new Date(Date.now() + 259200000),
+        expires: new Date(Date.now() + 2700000),
         httpOnly: true,
       });
       res.redirect("/user/dashboard");

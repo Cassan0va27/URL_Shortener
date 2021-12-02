@@ -7,6 +7,7 @@ import { About } from "./About";
 import { Dashboard } from "./Dashboard";
 import { Loading } from "./Loading";
 import { Logout } from "./Logout";
+import { Convert } from "./Convert";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/user/dashboard" component={Dashboard} />
           <Route path="/about" component={About} />
           <Route path="/loading" component={Loading} />
+          <Route path="/user/convert" component={Convert} />
           <Route exact path="/user/logout" component={Logout} />
         </>
       </Switch>
